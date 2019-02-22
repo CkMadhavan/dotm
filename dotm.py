@@ -40,7 +40,7 @@ def run(y):
                         a = y[y.find('(') + 1:y.find(',')].strip()
                         m = int(a)
                         for i in range(0,m) :
-                            run (y[y.find(',') + 1 :])
+                            run (y[y.find(',') + 1 :].strip())
                         run(s)  
                     else :
                         text.append("Some Error!")
