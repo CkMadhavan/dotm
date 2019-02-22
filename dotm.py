@@ -36,8 +36,8 @@ def run(y):
             if "times.M(" in y:
                 if ")" in y:
                     if "," in y:
-                        s = y[y.find(')') + 2:]
-                        a = y[y.find('(') + 1:y.find(',')]
+                        s = y[y.find(')') + 2:].strip()
+                        a = y[y.find('(') + 1:y.find(',')].strip()
                         m = int(a)
                         for i in range(0,m) :
                             run (y[y.find(',') + 1 :])
@@ -153,7 +153,7 @@ def run(y):
                     if "," in y:
                         if "@" in y:
                             varname = y[y.find('@') + 1 : y.find(',')]
-                            num = y[y.find(',') + 1 : y.find(')')]
+                            num = y[y.find(',') + 1 : y.find(')')].strip()
                             addd.update({varname : num})
                             run(y[y.find(')') + 1 :]) 
                         else :
