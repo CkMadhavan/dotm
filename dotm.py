@@ -2,14 +2,13 @@ from flask import Flask , render_template,request , redirect , url_for
 
 app = Flask(__name__)
 
-addd = {}
 
 def run(y):
     if y is not "":
         if y[0] is 'd':
             if "display.M(" in y:
                 if ")" in y:
-                    s = y[y.find('(') + 1:y.find(')')]
+                    s = y[y.find('(') + 1:y.find(')')].strip()
                     if s[0] is not '@':
                         text.append (s)
                     else :
@@ -41,8 +40,8 @@ def run(y):
             if "add.M(" in y:
                 if ")" in y:
                     if "," in y:
-                        str1 = y[y.find('(') + 1 : y.find(',')]
-                        str2 = y[y.find(',') + 1 : y.find(')')]
+                        str1 = y[y.find('(') + 1 : y.find(',')].strip()
+                        str2 = y[y.find(',') + 1 : y.find(')')].strip()
                         if str1[0] is not '@':
                             num1 = int(str1)
                         if str1[0] is '@' :
@@ -63,8 +62,8 @@ def run(y):
             if "sub.M(" in y:
                 if ")" in y:
                     if "," in y:
-                        str1 = y[y.find('(') + 1 : y.find(',')]
-                        str2 = y[y.find(',') + 1 : y.find(')')]
+                        str1 = y[y.find('(') + 1 : y.find(',')].strip()
+                        str2 = y[y.find(',') + 1 : y.find(')')].strip()
                         if str1[0] is not '@':
                             num1 = int(str1)
                         if str1[0] is '@' :
@@ -85,8 +84,8 @@ def run(y):
             if "mul.M(" in y:
                 if ")" in y:
                     if "," in y:
-                        str1 = y[y.find('(') + 1 : y.find(',')]
-                        str2 = y[y.find(',') + 1 : y.find(')')]
+                        str1 = y[y.find('(') + 1 : y.find(',')].strip()
+                        str2 = y[y.find(',') + 1 : y.find(')')].strip()
                         if str1[0] is not '@':
                             num1 = int(str1)
                         if str1[0] is '@' :
@@ -107,8 +106,8 @@ def run(y):
             if "over.M(" in y:
                 if ")" in y:
                     if "," in y:
-                        str1 = y[y.find('(') + 1 : y.find(',')]
-                        str2 = y[y.find(',') + 1 : y.find(')')]
+                        str1 = y[y.find('(') + 1 : y.find(',')].strip()
+                        str2 = y[y.find(',') + 1 : y.find(')')].strip()
                         if str1[0] is not '@':
                             num1 = int(str1)
                         if str1[0] is '@' :
@@ -129,7 +128,7 @@ def run(y):
             if "var.M(" in y:
                 if ")" in y:
                     if "@" in y:
-                        varname = y[y.find('@') + 1 : y.find(')')]
+                        varname = y[y.find('@') + 1 : y.find(')')].strip()
                         addd.update({varname : 0})
                         run(y[y.find(')') + 1 :])       
                     else :
@@ -142,7 +141,7 @@ def run(y):
                 if ")" in y:
                     if "," in y:
                         if "@" in y:
-                            varname = y[y.find('@') + 1 : y.find(',')]
+                            varname = y[y.find('@') + 1 : y.find(',')].strip()
                             num = y[y.find(',') + 1 : y.find(')')].strip()
                             addd.update({varname : num})
                             run(y[y.find(')') + 1 :]) 
@@ -159,6 +158,8 @@ text = []
 @app.route('/')
 def index():
     
+    
+    addd = {}
     return render_template('index.html')
 
 @app.route('/output' , methods = ["POST"])
