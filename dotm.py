@@ -2,6 +2,7 @@ from flask import Flask , render_template,request , redirect , url_for
 
 app = Flask(__name__)
 
+addd = {}
 
 def run(y):
     if y is not "":
