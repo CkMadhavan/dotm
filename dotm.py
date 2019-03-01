@@ -27,7 +27,7 @@ def run(y):
                         a = y[y.find('(') + 1:y.find(',')].strip()
                         if a[0] is not '@':
                             num1 = int(a)
-                        if str1[0] is '@' :
+                        if a[0] is '@' :
                             m = int(addd[a[1 : y.find(',')]])
                         for i in range(0,m) :
                             run (y[y.find(',') + 1 :].strip())
