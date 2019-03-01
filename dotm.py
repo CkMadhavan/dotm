@@ -186,7 +186,7 @@ def out():
 
 @app.route('\help')
 def hel():
-    retrun render_template('help.html')
+    return render_template('help.html')
 
 if __name__ == "__main__":
     app.run()
