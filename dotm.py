@@ -1,19 +1,3 @@
-# This Is The Interactive Shell Of .M Programming Language
-# In This You Can Use The display.M() Function To Output The Desired Text on the Screen
-# Example : display.M(Hi)
-# You Can Use times.M() To Perform A Function n No Of Times
-# Example times.M(3,display.M(Hi))
-# You Can Use add.M() , sub.M() , mul.M() , over.M() to Add , Subtract , Multiply And Divide Two Numbers Respectively
-# Example add.M(3,4) etc.
-# You Can Write Multiple Lines Of Code
-''' Example : display.M(Hi)
-            display.M(Everyone)
-            times.M(2,display.M(Great))
-            mul.M(4,5)
-            display.M(This is .M)
-'''
-# Do not Use "" Or ; As You Do In Other Programming Languages
-# Please Upvote If You Like (*__*)
 from flask import Flask , render_template,request , redirect , url_for
 
 app = Flask(__name__)
