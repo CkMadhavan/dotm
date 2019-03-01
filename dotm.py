@@ -184,7 +184,7 @@ def out():
     print(process_text)
     return render_template('temp.html' , v=text)
 
-@app.route('\help')
+@app.route('/help')
 def hel():
     return render_template('help.html')
 
