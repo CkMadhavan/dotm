@@ -6,9 +6,12 @@
 # You Can Use add.M() , sub.M() , mul.M() , over.M() to Add , Subtract , Multiply And Divide Two Numbers Respectively
 # Example add.M(3,4) etc.
 # You Can Write Multiple Lines Of Code
-# Example : display.M(Hi)display.M(Everyone)times.M(2,display.M(Great))mul.M(4,5)display.M(This is .M)
-# Write Everything In One Line
-# Please Make sure You Do Not Use Unnecessary Space
+''' Example : display.M(Hi)
+            display.M(Everyone)
+            times.M(2,display.M(Great))
+            mul.M(4,5)
+            display.M(This is .M)
+'''
 # Do not Use "" Or ; As You Do In Other Programming Languages
 # Please Upvote If You Like (*__*)
 from flask import Flask , render_template,request
@@ -180,6 +183,10 @@ def out():
     run(process_text)
     print(process_text)
     return render_template('temp.html' , v=text)
+
+@app.route('\help')
+def hel():
+    retrun render_template('help.html')
 
 if __name__ == "__main__":
     app.run()
