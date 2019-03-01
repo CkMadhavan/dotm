@@ -14,7 +14,7 @@
 '''
 # Do not Use "" Or ; As You Do In Other Programming Languages
 # Please Upvote If You Like (*__*)
-from flask import Flask , render_template,request
+from flask import Flask , render_template,request , redirect , url_for
 
 app = Flask(__name__)
 
@@ -184,9 +184,9 @@ def out():
     print(process_text)
     return render_template('temp.html' , v=text)
 
-@app.route('\help.html')
+@app.route('\help')
 def hel():
-    return render_template('help.html')
+    return redirect(url_for('help'))
 
 if __name__ == "__main__":
     app.run()
