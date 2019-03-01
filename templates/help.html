@@ -1,1 +1,42 @@
 
+27 lines (19 sloc) 1.12 KB
+<html>
+
+    <head>
+    
+                <title>DOT M</title>
+                
+    </head>
+  
+  
+    <body style=background-image:url({{url_for('static' , filename = 'unnamed.jpg')}})>
+                <div style=width:60%;background:#cccccc;position:fixed;left:0;right:0;border-radius:15px;margin-right:auto;margin-left:auto;padding:20px;height:93%;>
+                <center><img src = {{url_for('static' , filename = 'sabertechnologies.png')}}></center>
+                    <div style=background:#fff;border-radius:15px;padding:10px;>
+                        <center><h1 style=color:#000;border-radius:5px; >DOT M</h1></center>
+                        <h3>HELP :</h3>
+                        Instructions:
+                             This Is The Interactive Shell Of .M Programming Language
+                             In This You Can Use The display.M() Function To Output The Desired Text on the Screen
+                             Example : display.M(Hi)
+                             You Can Use times.M() To Perform A Function n No Of Times
+                             Example times.M(3,display.M(Hi))
+                             You Can Use add.M() , sub.M() , mul.M() , over.M() to Add , Subtract , Multiply And Divide Two Numbers Respectively
+                             Example add.M(3,4) etc.
+                             You Can Use var.M() To Define A Variable
+                             Example : var.M(@d)[Here @ Is The Symbol That Denotes A Variable]
+                             You Can Use equals.M() To set Value of A Variable
+                             Example : equals.M(@hi,3)
+                             You Can Use Variables Inside display.M() , add.M() , etc.
+                             Example : display.M(@h)add.M(@g,@f)mul.M(2,@x)
+                             You Can Write Multiple Lines Of Code
+                             Write Everything In One Line
+                             Please Make sure You Do Not Use Unnecessary Space
+                             Do not Use  Or ; As You Do In Other Programming Languages
+                             Example : display.M(Hi)times.M(2,display.M(Good))var.M(@text)equals.M(@text,Hi Users)mul.M(4,5)display.M(This is .M)display.M(@text)times.M(3,sub.M(6,2))
+                  </div>
+       
+                </div>
+    </body>
+  
+</html>
