@@ -15,22 +15,48 @@
                     <div style=background:#fff;border-radius:15px;padding:10px;>
                         <center><h1 style=color:#000;border-radius:5px; >DOT M</h1></center>
                         <h3>HELP :</h3>
-                             * This Is The Online Compiler Of Dot M Programming Language<br>
-                             * In This You Can Use The display.M() Function To Output The Desired Text on the Screen<br>
-                             * Example : display.M(Hi)<br>
-                             * You Can Use times.M() To Perform A Function n No Of Times<br>
-                             * Example times.M(3,display.M(Hi))<br>
-                             * You Can Use add.M() , sub.M() , mul.M() , over.M() to Add , Subtract , Multiply And Divide Two Numbers Respectively<br>
-                             * Example add.M(3,4) etc.<br>
-                             * You Can Use var.M() To Define A Variable<br>
-                             * Example : var.M(@d)[Here @ Is The Symbol That Denotes A Variable]<br>
-                             * You Can Use equals.M() To set Value of A Variable<br>
-                             * Example : equals.M(@hi,3)<br>
-                             * You Can Use Variables Inside display.M() , add.M() , etc.<br>
-                             * Example : display.M(@h)add.M(@g,@f)mul.M(2,@x)<br>
-                             * You Can Write Multiple Lines Of Code<br>
-                             * Do not Use ; As You Do In Other Programming Languages<br>
-                             * Example : display.M(Hi)times.M(2,display.M(Good))var.M(@text)equals.M(@text,Hi Users)mul.M(4,5)display.M(This is .M)display.M(@text)times.M(3,sub.M(6,2))<br>
+                                                     
+                             * DISPLAY :
+                                     <pre><b>display.M(text/@var)</b></pre>
+                                     <pre>Displays The Desired Text / Variable On The Output Screen</pre><br>
+                                     <pre>Example : display.M(Hi)</pre>
+                        
+                             * ADD :
+                                     <pre><b>add.M(@a , @b)</b></pre>
+                                     <pre>Adds Two Numbers And Prints the Result</pre><br>
+                                     <pre>Example : add.M(5 , 6)</pre>
+                        
+                             * SUBTRACT :
+                                     <pre><b>sub.M(@a , @b)</b></pre>
+                                     <pre>Subtracts Two Numbers And Prints the Result</pre><br>
+                                     <pre>Example : sub.M(9 , 3)</pre>
+                        
+                             * MULTIPLY :
+                                     <pre><b>mul.M(@a , @b)</b></pre>
+                                     <pre>Multiply Two Numbers And Prints the Result</pre><br>
+                                     <pre>Example : mul.M(2 , 4)</pre>
+                        
+                             * DIVIDE :
+                                     <pre><b>over.M(@a , @b)</b></pre>
+                                     <pre>Divides Two Numbers And Prints the Result</pre><br>
+                                     <pre>Example : over.M(6 , 2)</pre>
+                        
+                             * VARIABLE DECLARATION :
+                                     <pre><b>var.M(@a)</b></pre>
+                                     <pre>Declares A Variable And Sets Its Value To 0</pre><br>
+                                     <pre>Example : var.M(@saber)</pre>
+                        
+                             * EQUALS :
+                                     <pre><b>equals.M(@a , number/text)</b></pre>
+                                     <pre>Sets A Value To A Variable</pre><br>
+                                     <pre>Example : equals.M(@hi , Hello)</pre>
+                        
+                             * LOOP :
+                                     <pre><b>times.M(@n , code)</b></pre>
+                                     <pre>Executes The Argument n Number Of Times</pre><br>
+                                     <pre>Example : times.M(5 , display.M(Hi) add.M(4 , 6))</pre>
+                                        
+                        
                   </div>
        
                 </div>
