@@ -8,7 +8,7 @@ def run(y):
     if y is not "":
         y = y.strip()
         if y[0] is 'd':
-            if "display.M(" in y:
+            if "display.M" in y:
                 if ")" in y:
                     s = y[y.find('(') + 1:y.find(')')].strip()
                     if s[0] is not '@':
@@ -21,7 +21,7 @@ def run(y):
                     text.append("Some Error!")
         
         elif y[0] is 't':        
-            if "times.M(" in y:
+            if "times.M" in y:
                 if ")" in y:
                     if "," in y:
                         s = y[y.find(')') + 2:].strip()
@@ -39,7 +39,7 @@ def run(y):
                     text.append("Some Error!")
                     
         elif y[0] is 'a' :
-            if "add.M(" in y:
+            if "add.M" in y:
                 if ")" in y:
                     if "," in y:
                         str1 = y[y.find('(') + 1 : y.find(',')].strip()
@@ -61,7 +61,7 @@ def run(y):
                     text.append("Some Error!")
                 
         elif y[0] is 's' :
-            if "sub.M(" in y:
+            if "sub.M" in y:
                 if ")" in y:
                     if "," in y:
                         str1 = y[y.find('(') + 1 : y.find(',')].strip()
@@ -83,7 +83,7 @@ def run(y):
                     text.append("Some Error!")
                         
         elif y[0] is 'm' :
-            if "mul.M(" in y:
+            if "mul.M" in y:
                 if ")" in y:
                     if "," in y:
                         str1 = y[y.find('(') + 1 : y.find(',')].strip()
@@ -105,7 +105,7 @@ def run(y):
                     text.append("Some Error!")
                         
         elif y[0] is 'o' :
-            if "over.M(" in y:
+            if "over.M" in y:
                 if ")" in y:
                     if "," in y:
                         str1 = y[y.find('(') + 1 : y.find(',')].strip()
@@ -127,7 +127,7 @@ def run(y):
                     text.append("Some Error!")
         
         elif y[0] is 'v' :
-            if "var.M(" in y:
+            if "var.M" in y:
                 if ")" in y:
                     if "@" in y:
                         varname = y[y.find('@') + 1 : y.find(')')].strip()
@@ -139,7 +139,7 @@ def run(y):
                     text.append("Some Error!")
                     
         elif y[0] is 'e' :
-            if "equals.M(" in y:
+            if "equals.M" in y:
                 if ")" in y:
                     if "," in y:
                         if "@" in y:
@@ -153,6 +153,7 @@ def run(y):
                         text.append("Some Error!")
                 else :
                     text.append("Some Error!")
+                   
                 
 
 text = []
