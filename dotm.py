@@ -6,6 +6,7 @@ addd = {}
 
 def run(y):
     if y is not "":
+        y = y.strip()
         if y[0] is 'd':
             if "display.M(" in y:
                 if ")" in y:
